@@ -1,52 +1,46 @@
 name: Build APK
 
 on:
-  push:
-    branches: [ main, master ]
   workflow_dispatch:
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      # CONFIGURACIÓN GIT (SIN TOKEN)
-      - name: Configure Git
-        run: |
-          git config --global user.email "sebastiangonzalez@email.com"
-          git config --global user.name "SebastianGonzalezI"
-          git config --global init.defaultBranch main
-
-      # CLONAR REPOSITORIO (SIN TOKEN)
       - uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-
-      # INSTALAR DEPENDENCIAS
+      
       - name: Install dependencies
         run: |
           sudo apt update
-          sudo apt install -y git zip unzip autoconf libtool pkg-config zlib1g-dev libncurses-dev cmake libffi-dev libssl-dev openjdk-17-jdk python3-pip
+          sudo apt install -y python3-pip openjdk-17-jdk git zip unzip autoconf libtool pkg-config zlib1g-dev libncurses-dev cmake libffi-dev libssl-dev
           pip install buildozer cython
-
-      # GENERAR APK
-      - name: Build APK
+      
+      - name: Build APK (with logs)
+        id: build
+        continue-on-error: true  # Evita que el workflow se detenga si falla
         run: |
-          buildozer android debug --verbose
-
-      # SUBIR APK SI ÉXITO
+          buildozer android debug --verbose 2>&1 | tee build.log
+          echo "=== ÚLTIMAS 100 LÍNEAS DEL LOG ==="
+          tail -100 build.log
+      
+      - name: Show log files if failed
+        if: steps.build.outcome == 'failure'
+        run: |
+          find . -name "*.log" -type f -exec echo "=== {} ===" \; -exec cat {} \;
+      
+      - name: Upload logs always
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: all-logs
+          path: |
+            build.log
+            .buildozer/*.log
+            .buildozer/**/*.log
+      
       - name: Upload APK
         if: success()
         uses: actions/upload-artifact@v4
         with:
           name: apk
           path: bin/*.apk
-
-      # SUBIR LOGS SI FALLA
-      - name: Upload build logs if failed
-        if: failure()
-        uses: actions/upload-artifact@v4
-        with:
-          name: build-logs
-          path: |
-            build.log
-            .buildozer/android/platform/build-arm64-v8a/logs/*.log
