@@ -1,0 +1,31 @@
+==================================================
+           REPORTE DE CIERRE DE JORNADA
+==================================================
+Fecha:       2026-07-22
+Usuario:     JUAN DE ARCO
+Inicio:      21:24:18
+Cierre:      None
+Duracion:    1109352h 7m
+Tipo cierre: MANUAL
+--------------------------------------------------
+Total Ventas:         0
+Monto Ventas:         $0.00
+
+INGRESOS POR METODO DE PAGO:
+  Efectivo:      $0.00
+  Tarjeta:       $0.00
+  Transferencia: $0.00
+  TOTAL INGRESOS: $0.00
+
+--------------------------------------------------
+GANANCIA NETA:       $0.00
+
+--------------------------------------------------
+CAJA CHICA
+--------------------------------------------------
+Caja chica inicial:  $5.00
+Total ingresos:      $0.00
+Total egresos:       $0.00
+Caja chica final:    $5.00
+==================================================
+Generado: 2026-07-22 21:32:07

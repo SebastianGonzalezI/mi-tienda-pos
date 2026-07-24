@@ -1,0 +1,31 @@
+==================================================
+           REPORTE DE CIERRE DE JORNADA
+==================================================
+Fecha:       2026-07-21
+Usuario:     MARIA FERNANDA ARCOS
+Inicio:      21:36:41
+Cierre:      None
+Duracion:    1109328h 42m
+Tipo cierre: MANUAL
+--------------------------------------------------
+Total Ventas:         0
+Monto Ventas:         $0.00
+
+INGRESOS POR METODO DE PAGO:
+  Efectivo:      $0.00
+  Tarjeta:       $0.00
+  Transferencia: $0.00
+  TOTAL INGRESOS: $0.00
+
+--------------------------------------------------
+GANANCIA NETA:       $0.00
+
+--------------------------------------------------
+CAJA CHICA
+--------------------------------------------------
+Caja chica inicial:  $10.00
+Total ingresos:      $0.00
+Total egresos:       $0.00
+Caja chica final:    $10.00
+==================================================
+Generado: 2026-07-21 22:19:10

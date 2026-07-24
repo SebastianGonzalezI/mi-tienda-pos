@@ -1,0 +1,13 @@
+FROM kivy/buildozer
+USER root
+RUN sed -i 's/set -euo pipefail/set -uo pipefail/' /usr/local/bin/entrypoint.sh
+RUN sed -i 's/cont = None/cont = "y"/' /home/user/.venv/lib/python3.14/site-packages/buildozer/__init__.py
+RUN sed -i '/while cont not in/d' /home/user/.venv/lib/python3.14/site-packages/buildozer/__init__.py
+RUN sed -i "/cont = input(/d" /home/user/.venv/lib/python3.14/site-packages/buildozer/__init__.py
+# Create sdkmanager wrapper that auto-accepts licenses
+RUN mkdir -p /usr/local/sdk-wrapper && \
+    echo '#!/bin/bash' > /usr/local/sdk-wrapper/sdkmanager && \
+    echo 'if [[ "$*" == *--list* ]]; then exec /home/user/.venv/bin/sdkmanager "$@"; fi' >> /usr/local/sdk-wrapper/sdkmanager && \
+    echo 'echo "y" | /home/user/.venv/bin/sdkmanager "$@"' >> /usr/local/sdk-wrapper/sdkmanager && \
+    chmod +x /usr/local/sdk-wrapper/sdkmanager
+ENV PATH="/usr/local/sdk-wrapper:$PATH"

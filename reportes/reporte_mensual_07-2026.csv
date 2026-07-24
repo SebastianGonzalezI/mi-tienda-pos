@@ -1,0 +1,55 @@
+﻿RESUMEN MENSUAL,07-2026
+
+Total Ventas,19
+Total Ingresos,$694.19
+Total Egresos,$22.00
+Ganancia Neta,$672.19
+Efectivo,$456.55
+Tarjeta,$192.28
+Transferencia,$45.36
+Usuarios,"ARMANDO PAREDES, Cristina Arcos, JUAN SEBASTIAN GONZALEZ, Juan Sebastian Gonzalez, MARCO POLO, MARCO RUA, MARIA FERNANDA ARCOS, MARIA GABRIELA ARCOS, Maria Gabriela Arcos"
+
+VENTAS DEL MES
+#,Fecha,Cliente,Total,Metodo Pago
+1,2026-07-21 00:53:49,Consumidor Final,$80.28,Tarjeta
+2,2026-07-21 01:01:24,Consumidor final,$18.82,Efectivo
+3,2026-07-21 01:05:04,Consumidor final,$52.68,Efectivo
+4,2026-07-21 01:06:58,Consumidor final,$18.82,Tarjeta
+5,2026-07-21 01:07:26,Consumidor final,$43.90,Tarjeta
+6,2026-07-21 01:08:39,Consumidor final,$27.60,Efectivo
+7,2026-07-21 01:18:52,Consumidor final,$23.21,Efectivo
+8,2026-07-21 01:35:59,Consumidor final,$7.53,Efectivo
+9,2026-07-21 02:02:44,Consumidor final,$19.32,Efectivo
+10,2026-07-21 02:06:44,Consumidor final,$32.20,Efectivo
+11,2026-07-21 02:10:45,Consumidor final,$56.56,Efectivo
+12,2026-07-21 02:11:50,Consumidor final,$50.00,Efectivo
+13,2026-07-21 21:30:41,Consumidor final,$45.36,Transferencia
+14,2026-07-21 21:31:16,Consumidor final,$31.92,Efectivo
+15,2026-07-21 23:00:02,Consumidor final,$36.80,Efectivo
+16,2026-07-21 23:25:09,CONSUMIDOR FINAL,$24.64,Tarjeta
+17,2026-07-22 00:05:53,CONSUMIDOR FINAL,$39.20,Efectivo
+18,2026-07-22 20:58:42,CONSUMIDOR FINAL,$60.72,Efectivo
+19,2026-07-22 21:00:29,CLIENTE SIN NOMBRE,$24.64,Tarjeta
+
+PRODUCTOS VENDIDOS
+Producto,Codigo,Cantidad,Subtotal
+Collar Antipulgas,VET004,5,$115.28
+PELUQUERIA,VET014,4,$74.00
+Desparasitante Oral Perros,VET002,3,$48.60
+Comida Gato Adulto 1.5kg,VET006,3,$85.50
+Antibiótico Amoxicilina 500mg,VET009,2,$94.08
+Comida Premium Perro 3kg,VET005,2,$74.20
+Guantes Quirúrgicos (x50),VET010,2,$12.72
+Shampoo Antipulgas,VET003,1,$20.72
+Peluqueria Small,pelq1,1,$17.25
+PELUQUERIA MEDIANO,VET011,1,$28.75
+OPERACION,VET012,1,$50.00
+Jeringas 5ml (x100),VET007,1,$12.00
+
+EGRESOS
+Fecha,Descripcion,Monto
+2026-07-21 01:09:53,almuerzo,$3.50
+2026-07-21 21:35:47,ALMUERZOS,$5.00
+2026-07-22 21:03:42,COMPRA DE AGUA,$10.00
+2026-07-22 21:05:23,COMPRA DE PAN,$1.00
+2026-07-22 21:06:00,ALMUERZO,$2.50

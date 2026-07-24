@@ -1,0 +1,11 @@
+.buildozer/
+bin/
+__pycache__/
+*.pyc
+venv/
+buildozer_env/
+tienda.db
+*.log
+.DS_Store
+.idea/
+.vscode/
